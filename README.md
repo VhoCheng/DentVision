@@ -19,7 +19,23 @@ Dental caries remain one of the most prevalent oral diseases worldwide and are c
 To explore the feasibility of AI-assisted dental diagnosis, DentVision evaluates multiple YOLO-based object detection models for automated cavity detection in intraoral photographs. The project focuses on a lightweight and reproducible workflow that can be further extended for intelligent oral screening applications.
 
 ---
+## Overview
+## Detection Visualization
 
+Below is a comparison between the **ground truth annotations** and the **model predictions** on the validation set.
+
+### Ground Truth Labels
+
+<p align="center">
+<img src="assets/val_batch2_labels.jpg" width="700">
+</p>
+
+### Model Predictions
+
+<p align="center">
+<img src="assets/val_batch2_pred.jpg" width="700">
+</p>
+---
 ## Project Highlights
 
 - Automated detection of **dental cavities** from intraoral images
