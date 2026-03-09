@@ -1,49 +1,54 @@
 # DentVision
 ## YOLO-Based Automated Detection of Dental Cavities in Intraoral Images
 
-DentVision is a deep learning framework for **automated detection of dental cavities in intraoral images** using YOLO-based object detection models.
+![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
+![Framework](https://img.shields.io/badge/Framework-Ultralytics%20YOLO-orange.svg)
+![Task](https://img.shields.io/badge/Task-Dental%20Cavity%20Detection-brightgreen.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Status](https://img.shields.io/badge/Status-Research%20Project-purple.svg)
 
-This project explores the application of modern object detection algorithms for **computer-aided dental diagnosis**, providing a comparative evaluation of multiple YOLO architectures.
-
----
-
-# Project Overview
-
-Dental caries remain one of the most prevalent oral diseases worldwide. Early detection is essential for effective treatment and prevention. However, manual diagnosis from intraoral images is time-consuming and highly dependent on clinical expertise.
-
-DentVision aims to develop an **AI-assisted cavity detection system** that can automatically identify suspicious caries regions from dental photographs.
+DentVision is a deep learning research project for **automated detection of dental cavities in intraoral images** using YOLO-based object detection models.  
+This repository presents the complete workflow of **dataset preparation, label conversion, model training, evaluation, and result visualization** for computer-aided dental diagnosis.
 
 ---
 
-# Model Architecture
+## Overview
 
-This project evaluates three YOLO-based object detection models:
+Dental caries remain one of the most prevalent oral diseases worldwide and are closely associated with oral pain, infection, and reduced quality of life. Early identification of suspicious carious regions is clinically important, yet manual examination from images is time-consuming and depends heavily on professional expertise.
 
-| Model | Type |
-|------|------|
-| YOLOv5s | Baseline detector |
-| YOLOv8n | Lightweight improved detector |
-| YOLOv8s | Enhanced detection performance |
-
-All models were trained with identical dataset splits and experimental settings.
+To explore the feasibility of AI-assisted dental diagnosis, DentVision evaluates multiple YOLO-based object detection models for automated cavity detection in intraoral photographs. The project focuses on a lightweight and reproducible workflow that can be further extended for intelligent oral screening applications.
 
 ---
 
-# Dataset
+## Project Highlights
 
-The dataset contains **intraoral dental images** annotated with bounding boxes.
+- Automated detection of **dental cavities** from intraoral images
+- Comparative evaluation of **YOLOv5s, YOLOv8n, and YOLOv8s**
+- Annotation conversion from **oriented bounding box format** to standard YOLO format
+- Quantitative evaluation using **Precision, Recall, mAP@0.5, and mAP@0.5:0.95**
+- Visualization of training curves, confusion matrix, PR curve, and detection examples
+- Reproducible research workflow for dental AI studies
 
-Classes:
+---
 
-- cavity
-- normal
+## Project Structure
 
-Dataset configuration:
-
-```yaml
-train: train/images
-val: valid/images
-test: test/images
-
-nc: 2
-names: ['cavity','normal']
+```text
+DentVision/
+├── .gitignore
+├── LICENSE
+├── README.md
+├── README.dataset.txt
+├── README.roboflow.txt
+├── convert_labels.py
+├── data.yaml
+├── assets/
+│   ├── pipeline.png
+│   ├── results_yolov5s.png
+│   ├── results_yolov8n.png
+│   ├── results_yolov8s.png
+│   ├── pr_curve.png
+│   ├── confusion_matrix.png
+│   ├── pred1.jpg
+│   ├── pred2.jpg
+│   └── pred3.jpg
